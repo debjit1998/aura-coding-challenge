@@ -111,7 +111,11 @@ const handler = async (event) => {
       );
     });
   }
-  res.json(result);
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify(result),
+  };
 };
 
 // lambda-like handler function
